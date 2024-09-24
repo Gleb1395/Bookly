@@ -103,4 +103,4 @@ class Client(AbstractBaseUser, PermissionsMixin):
     def get_full_address(self):
         return f"{self.country} {self.city}"
 
-    def send_welcome_email(self): ...  # NOQA: E704
+    def send_welcome_email(self): ...  # NOQA: E704 # TODO Реализовать отправку EMAIL
