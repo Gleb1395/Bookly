@@ -1,6 +1,6 @@
 from config.settings.base import *  # NOQA
 
-SECRET_KEY = "django-insecure-_0#chxkmcfc@!myb)8*je4jbm5_bbs50flw29c-79ir(l*9v=t"
+SECRET_KEY = os.getenv("SECRET_KEY")  # NOQA: F405
 
 DEBUG = True
 
