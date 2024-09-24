@@ -14,3 +14,10 @@ DATABASES = {
 }
 
 STATIC_URL = "static/"
+MEDIA_ROOT = "media/"
+MEDIA_URL = "media/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),  # NOQA F405
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # NOQA F405
