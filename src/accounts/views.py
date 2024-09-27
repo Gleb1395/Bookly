@@ -1,7 +1,9 @@
 from django.conf import settings
+
+
 from django.core.mail import send_mail
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+
 
 
 def send_test_email(request: HttpRequest) -> HttpResponse:

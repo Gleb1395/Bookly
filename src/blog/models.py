@@ -12,3 +12,7 @@ class Blog(models.Model):
     content = models.TextField(_("content"), null=False, blank=False)
     publish_date = models.DateTimeField(_("publish_date"), null=False, blank=False)
     slug = models.SlugField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = _("blog")
+        verbose_name_plural = _("blogs")

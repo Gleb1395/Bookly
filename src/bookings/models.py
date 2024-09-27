@@ -13,17 +13,16 @@ class Booking(models.Model):
     INACTIVE = 0
 
     BOOKING_STATUS_CHOICES = [
-        (ACTIVE, _("Active")),
-        (INACTIVE, _("Inactive")),
+        (ACTIVE, _("active")),
+        (INACTIVE, _("inactive")),
     ]
 
-    client = models.ForeignKey(to="accounts.Client", on_delete=models.CASCADE, related_name="client")
-    # hotel = ...
-    # room = ...
+    client = models.ForeignKey(to="accounts.Client", on_delete=models.CASCADE, related_name="payments", null=True)
+    hotel = models.ForeignKey(to="hotels.Hotel", on_delete=models.CASCADE, related_name="hotel", null=True)
     arrival_date = models.DateTimeField(_("arrival_date"), null=False, blank=False)
     departure_date = models.DateTimeField(_("departure_date"), null=False, blank=False)
     total_price = models.FloatField(
-        _("Total price"),
+        _("total price"),
         blank=True,
         null=True,
         validators=[
@@ -31,9 +30,12 @@ class Booking(models.Model):
         ],
     )
     booking_status = models.IntegerField(
-        _("Booking status"),
+        _("booking status"),
         choices=BOOKING_STATUS_CHOICES,
         default=INACTIVE,
         blank=True,
         null=True,
     )
+
+    def __str__(self):
+        return f"{self.booking_status} - {self.hotel}"
