@@ -22,7 +22,11 @@ class Hotel(models.Model):
         (FOUR_STARS, _("Four stars")),
         (FIVE_STARS, _("Five stars")),
     ]
-    room = models.ForeignKey(to='hotels.Room', on_delete=models.CASCADE, null=True,)
+    room = models.ForeignKey(
+        to="hotels.Room",
+        on_delete=models.CASCADE,
+        null=True,
+    )
     country = models.CharField(_("country"), max_length=150, blank=True, null=True)
     city = models.CharField(_("city"), max_length=150, blank=True, null=True)
     hotel_name = models.CharField(_("name"), max_length=150, blank=True, null=True)
@@ -37,33 +41,34 @@ class Hotel(models.Model):
     client_reviews = models.TextField(_("client reviews"), blank=True, null=True)
 
     class Meta:
-        verbose_name = _('hotel')
-        verbose_name_plural = _('hotels')
+        verbose_name = _("hotel")
+        verbose_name_plural = _("hotels")
 
     def __str__(self):
-        return f'{self.hotel_name} by {self.city}'
+        return f"{self.hotel_name} by {self.city}"
 
 
 class Room(models.Model):
     """
     A model to represent a room in a hotel.
     """
+
     ROOM_TYPE_CHOICES = [
-        ('SGL', _('Single')),
-        ('DBL', _('Double')),
-        ('TWN', _('Twin')),
-        ('STU', _('Studio')),
-        ('APT', _('Apartment')),
-        ('DEL', _('Deluxe')),
-        ('FAM', _('Family')),
-        ('OFF', _('Office')),
+        ("SGL", _("Single")),
+        ("DBL", _("Double")),
+        ("TWN", _("Twin")),
+        ("STU", _("Studio")),
+        ("APT", _("Apartment")),
+        ("DEL", _("Deluxe")),
+        ("FAM", _("Family")),
+        ("OFF", _("Office")),
     ]
 
     ROOM_STATUS_CHOICES = [
-        ('AVAILABLE', _('Available')),
-        ('OCCUPIED', _('Occupied')),
-        ('RESERVED', _('Reserved')),
-        ('MAINTENANCE', _('Maintenance')),
+        ("AVAILABLE", _("Available")),
+        ("OCCUPIED", _("Occupied")),
+        ("RESERVED", _("Reserved")),
+        ("MAINTENANCE", _("Maintenance")),
     ]
 
     room_number = models.SmallIntegerField(
@@ -71,36 +76,41 @@ class Room(models.Model):
         null=True,
         blank=True,
         unique=True,
-        validators=[MinValueValidator(1), ]
+        validators=[
+            MinValueValidator(1),
+        ],
     )
     room_type = models.CharField(_("room type"), choices=ROOM_TYPE_CHOICES, null=True, blank=True, max_length=120)
-    room_status = models.CharField(
-        _("room status"),
-        choices=ROOM_STATUS_CHOICES,
-        null=True,
-        blank=True,
-        max_length=120
-    )
+    room_status = models.CharField(_("room status"), choices=ROOM_STATUS_CHOICES, null=True, blank=True, max_length=120)
     price_per_night = models.FloatField(
         _("price per night"),
         null=True,
         blank=True,
-        validators=[MinValueValidator(0.0), ]
+        validators=[
+            MinValueValidator(0.0),
+        ],
     )
     amenities = models.ManyToManyField(to="hotels.Amenity", related_name="amenities")
-    floor = models.SmallIntegerField(_('floor'), null=True, blank=True, validators=[MinValueValidator(1), ], )
-    room_description = models.TextField(_('room description'), null=True, blank=True)
+    floor = models.SmallIntegerField(
+        _("floor"),
+        null=True,
+        blank=True,
+        validators=[
+            MinValueValidator(1),
+        ],
+    )
+    room_description = models.TextField(_("room description"), null=True, blank=True)
 
     def __str__(self):
         return f"{self.room_number} {self.room_type} {self.room_status}"
 
     class Meta:
-        verbose_name = _('room')
-        verbose_name_plural = _('rooms')
+        verbose_name = _("room")
+        verbose_name_plural = _("rooms")
 
 
 class Amenity(models.Model):
-    name = models.CharField(_('name'), blank=True, null=True, max_length=150)
+    name = models.CharField(_("name"), blank=True, null=True, max_length=150)
 
     def __str__(self):
-        return f'{self.name}'
+        return f"{self.name}"

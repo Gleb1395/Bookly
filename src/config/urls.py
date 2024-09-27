@@ -23,5 +23,4 @@ from accounts.views import send_test_email
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("test-mail/", send_test_email, name="send_test_email"),
-
 ]

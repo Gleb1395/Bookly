@@ -32,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "phonenumber_field",
-    'main',
+    "main",
     "accounts",
     "api",
     "bookings",
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "reviews",
     "blog",
     "crispy_forms",
-    'crispy_bootstrap5'
+    "crispy_bootstrap5",
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
