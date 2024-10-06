@@ -1,0 +1,136 @@
+/* ==== 
+ --------- (5.15) who section styles start ---------
+ ==== */
+
+.who {
+  padding: 100px 0px;
+  background-color: #eef5ff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .z-shape {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 520px;
+    height: 100%;
+    background-color: var(--base-color);
+    clip-path: polygon(
+      100% 0%,
+      34% 41%,
+      96% 80%,
+      58% 100%,
+      28% 100%,
+      68% 80%,
+      8% 42%,
+      73% 0%
+    );
+    transform: translateX(150px);
+    z-index: -1;
+  }
+
+  .z-shape-l {
+    position: absolute;
+    top: -125px;
+    left: 326px;
+    height: 520px;
+    width: 40px;
+    transform: rotate(45deg);
+    background-color: var(--base-color);
+    z-index: -1;
+  }
+
+  .z-shape-s {
+    position: absolute;
+    bottom: -59px;
+    left: 540px;
+    height: 200px;
+    width: 40px;
+    transform: rotate(50deg);
+    background-color: var(--base-color);
+    z-index: -1;
+  }
+
+  .z-shape-sq {
+    position: absolute;
+    bottom: -56px;
+    left: -102px;
+    height: 450px;
+    width: 460px;
+    transform: rotate(45deg);
+    background-color: var(--quaternary-color);
+    z-index: -2;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 100% 100%, 0% 100%);
+  }
+
+  .who__thumb {
+    position: relative;
+    display: inline-block;
+    .thumb-sm {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .about__content-inner {
+    p {
+      color: #555555;
+    }
+  }
+
+  .about__content-single {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    border: 1px solid #dedede;
+    position: relative;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--white);
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1px;
+      background-color: var(--base-color);
+      width: 6px;
+      height: 90%;
+    }
+
+    h6 {
+      font-weight: 600;
+      color: var(--quaternary-color);
+      transition: var(--transition);
+    }
+
+    .thumb {
+      i {
+        font-size: 48px;
+        color: var(--black);
+      }
+    }
+  }
+
+  .about-content__wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 70px;
+    row-gap: 24px;
+    margin: 30px 0px;
+  }
+  .cta {
+    margin-top: 50px;
+  }
+}
+
+/* ==== 
+ --------- (5.15) who section styles end ---------
+ ==== */

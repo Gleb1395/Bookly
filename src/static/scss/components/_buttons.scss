@@ -1,0 +1,86 @@
+/* ==== 
+ --------- (3.01) buttons styles start ---------
+ ==== */
+
+.btn--primary {
+  padding: 13px 24px;
+  background-color: var(--base-color);
+  color: var(--white);
+  border: 1px solid var(--base-color);
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    bottom: 0px;
+    width: 4px;
+    height: 100%;
+    background-color: var(--white);
+    opacity: 0.3;
+    transition: var(--transition);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: var(--black);
+    transition: var(--transition);
+    z-index: -1;
+  }
+  &:hover {
+    border: 1px solid var(--black);
+    &::after {
+      right: calc(100% - 8px);
+    }
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.btn--secondary {
+  padding: 13px 24px;
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    bottom: 0px;
+    width: 4px;
+    height: 100%;
+    background-color: var(--white);
+    transition: var(--transition);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: var(--base-color);
+    transition: var(--transition);
+    z-index: -1;
+  }
+  &:hover {
+    border: 1px solid var(--base-color);
+    &::after {
+      right: calc(100% - 8px);
+    }
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+/* ==== 
+ --------- (3.01) buttons styles end ---------
+ ==== */

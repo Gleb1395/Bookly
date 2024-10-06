@@ -1,0 +1,109 @@
+/* ==== 
+ --------- (5.13) authentication section styles start ---------
+ ==== */
+
+.authentication {
+  padding: 100px 0px;
+  background-color: var(--white);
+
+  .input-single {
+    width: 100%;
+    margin-bottom: 24px;
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+    label {
+      display: block;
+      color: var(--quaternary-color);
+      margin-bottom: 12px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    a {
+      display: block;
+      text-align: end;
+      margin-top: 12px;
+      font-size: 16px;
+      color: var(--quaternary-color);
+      font-weight: 600;
+      &:hover {
+        color: var(--base-color);
+      }
+    }
+    input {
+      border-radius: 0px;
+      border: 1px solid #aaaaaa;
+      background: var(--white);
+      padding: 12px 16px;
+      width: 100%;
+      color: var(--quaternary-color);
+      &:focus {
+        border-color: var(--base-color);
+      }
+      &::placeholder {
+        color: #a3a3a3;
+      }
+    }
+  }
+
+  .btn--primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section__content-cta {
+    margin-top: 40px;
+  }
+
+  .divider {
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    p {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: var(--quaternary-color);
+      font-weight: 600;
+    }
+
+    span {
+      height: 1px;
+      flex-grow: 1;
+      background-color: var(--quaternary-color);
+    }
+  }
+
+  .auth-footer {
+    margin-top: 16px;
+    p {
+      color: var(--quaternary-color);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      a {
+        color: var(--base-color);
+      }
+    }
+  }
+  .auth-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    button {
+      width: 60px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--quaternary-color);
+      border-radius: 12px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.13) authentication section styles end ---------
+ ==== */

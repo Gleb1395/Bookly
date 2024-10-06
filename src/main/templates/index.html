@@ -1,0 +1,1667 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'includes/_required_meta.html' %}
+</head>
+
+<body>
+
+
+<!--[if lt IE 9]>
+<p class=" browserupgrade
+    ">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+    your experience and security.
+</p>
+<![endif]-->
+<div class="page-wrapper">
+    <!-- preloader start -->
+    <div class="preloader"></div>
+    <!-- / preloader start -->
+
+    <!-- ==== header start ==== -->
+    <header class="main-header header-three">
+        {% include "includes/_header.html" %}
+    </header>
+    <!-- ==== / header end ==== -->
+{% block content %}
+    <!-- ==== banner start ==== -->
+    <section class="banner-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="banner-three__content">
+                        <span>Your Dream Home Awaits</span>
+                        <h1 class="title-animation">Helping You Find The
+                            Property of Your Dreams</h1>
+                        <div class="social">
+                            <a href="https://www.facebook.com/" target="_blank" aria-label="share us on facebook"
+                               title="facebook">
+                                <i class="flaticon-facebook"></i>
+                            </a>
+                            <a href="https://www.twitter.com/" target="_blank" aria-label="share us on twitter"
+                               title="twitter">
+                                <i class="flaticon-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" aria-label="share us on instagram"
+                               title="instagram">
+                                <i class="flaticon-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" aria-label="share us on linkedin"
+                               title="linkedin">
+                                <i class="flaticon-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="banner-three__cta">
+                        <div class="banner-tab-btn-wrapper" data-aos="fade-up" data-aos-duration="1200">
+                            <ul>
+                                <li>
+                                    <button data-target="#soldSearch" class="banner-tab-btn active">Sale</button>
+                                </li>
+                                <li>
+                                    <button data-target="#buySearch" class="banner-tab-btn">Buy</button>
+                                </li>
+                                <li>
+                                    <button data-target="#rentSearch" class="banner-tab-btn">Rent</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="banner-tab-item-wrapper" data-aos="fade-up" data-aos-duration="1200"
+                             data-aos-delay="200">
+                            <div class="banner-tab-item" id="soldSearch">
+                                <div class="search-property__wrapper">
+                                    <div class="search-property__single">
+                                        <form action="#" method="post">
+                                            <div class="input-single">
+                                                <input type="text" name="property-searchkeyword"
+                                                       id="propertySearchkeyword"
+                                                       placeholder="Enter Keywords Here...">
+                                                <select>
+                                                    <option data-display="Select Location">Select Location</option>
+                                                    <option value="usa">USA</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Canada">Canada</option>
+                                                </select>
+                                                <button disabled="disabled" class="filter"><span
+                                                        class="icon-filter"></span></button>
+                                            </div>
+                                            <button type="submit" class="btn--primary"><span>Search</span><i
+                                                    class="fa-solid fa-magnifying-glass"></i></button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="banner-tab-item" id="buySearch">
+                                <div class="search-property__wrapper">
+                                    <div class="search-property__single">
+                                        <form action="#" method="post">
+                                            <div class="input-single">
+                                                <input type="text" name="property-searchkeywordBuy"
+                                                       id="propertySearchkeywordBuy"
+                                                       placeholder="Enter Keywords Here...">
+                                                <select>
+                                                    <option data-display="Select Location">Select Location</option>
+                                                    <option value="usa">USA</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Canada">Canada</option>
+                                                </select>
+                                                <button disabled="disabled" class="filter"><span
+                                                        class="icon-filter"></span></button>
+                                            </div>
+                                            <button type="submit" class="btn--primary"><span>Search</span><i
+                                                    class="fa-solid fa-magnifying-glass"></i></button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="banner-tab-item" id="rentSearch">
+                                <div class="search-property__wrapper">
+                                    <div class="search-property__single">
+                                        <form action="#" method="post">
+                                            <div class="input-single">
+                                                <input type="text" name="property-searchkeywordRent"
+                                                       id="propertySearchkeywordRent"
+                                                       placeholder="Enter Keywords Here...">
+                                                <select>
+                                                    <option data-display="Select Location">Select Location</option>
+                                                    <option value="usa">USA</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Canada">Canada</option>
+                                                </select>
+                                                <button disabled="disabled" class="filter"><span
+                                                        class="icon-filter"></span></button>
+                                            </div>
+                                            <button type="submit" class="btn--primary"><span>Search</span><i
+                                                    class="fa-solid fa-magnifying-glass"></i></button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-three__thumb d-none d-lg-block">
+            <img src="{% static 'images/banner/banner-three-thumb.png' %}" alt="Image" data-aos="zoom-in"
+                 data-aos-duration="1200">
+            <div class="shape-one">
+                <i class="flaticon-bathroom"></i>
+                <span>03</span>
+            </div>
+            <div class="shape-two">
+                <i class="flaticon-double-bed"></i>
+                <span>04</span>
+            </div>
+        </div>
+
+        <div class="shape-lg"></div>
+        <div class="shape-xl"></div>
+    </section>
+    <!-- ==== / banner end ==== -->
+
+    <!-- ==== property type section start ==== -->
+    <section class="property-type" data-background="{% static 'images/property/slider-bg.png' %}">
+        <div class="container">
+            <div class="row align-items-center vertical-column-gap-lg">
+                <div class="col-12 col-xl-8">
+                    <div class="section__header">
+                        <span>Property Type</span>
+                        <h2 class="title-animation">Let's Explore by Property Type</h2>
+                        <div class="icon-thumb">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="slider-navigation-two justify-content-start justify-content-xl-end ">
+                        <button type="button" aria-label="prev slide" title="prev slide"
+                                class="prev-property prev-slide">
+                            <i class="fa-solid fa-angles-left"></i><span>Prev</span>
+                        </button>
+                        <button type="button" aria-label="next slide" title="next slide"
+                                class="next-property next-slide active">
+                            <span>Next</span><i class="fa-solid fa-angles-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="property-type-slider-wrapper">
+                        <div class="property-type-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-skyscrapers"></i>
+
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Commercial</a></h5>
+                                            <p>06 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-office"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Restaurant</a></h5>
+                                            <p>16 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Villas</a></h5>
+                                            <p>12 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-house-3"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Homes</a></h5>
+                                            <p>26 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa-1"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Offices</a></h5>
+                                            <p>07 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-skyscrapers"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Commercial</a></h5>
+                                            <p>06 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-office"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Restaurant</a></h5>
+                                            <p>16 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Villas</a></h5>
+                                            <p>12 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-house-3"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Homes</a></h5>
+                                            <p>26 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa-1"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Offices</a></h5>
+                                            <p>07 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / property type section end ==== -->
+
+    <!-- ==== property three section start ==== -->
+    <div class="property-three">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-5">
+                    <div class="section__header text-center">
+                        <span>Our Properties</span>
+                        <h2 class="title-animation">Our Featured Properties</h2>
+                        <div class="icon-thumb justify-content-center">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="swiper property-three-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="property-three__single">
+                                    <div class="thumb-wrapper">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/one.png' %}" alt="Image">
+                                            </a>
+                                            <div class="tag">
+                                                <span class="feature-tag">Feature</span>
+                                                <span class="sold-tag">Sold</span>
+                                            </div>
+                                            <div class="price-tag">
+                                                <span>$1,200/mo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+
+                                        <h4><a href="property-details.html">Luxury Home Appoint </a></h4>
+                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                            Bridgewater, NJ
+                                            08</p>
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                        </div>
+                                        <div class="property-footer">
+                                            <div class="author">
+                                                <div class="author-thumb">
+                                                    <img src="{% static 'images/thumb/properties/author/one.png' %}"
+                                                         alt="Image">
+                                                </div>
+                                                <div class="author-meta">
+                                                    <p>Wiliam Siman</p>
+                                                    <p>East Agents</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer-cta">
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-heart"></i>
+                                                    <span class="tool">Wishlist</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-shared-vision"></i>
+                                                    <span class="tool">Quick View</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-add"></i>
+                                                    <span class="tool">Project Details</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="property-three__single">
+                                    <div class="thumb-wrapper">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/two.png' %}" alt="Image">
+                                            </a>
+                                            <div class="tag">
+                                                <span class="feature-tag">Feature</span>
+                                                <span class="sold-tag">Sold</span>
+                                            </div>
+                                            <div class="price-tag">
+                                                <span>$1,500/mo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+
+                                        <h4><a href="property-details.html">House on the Clarita</a></h4>
+                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                            Bridgewater, NJ
+                                            08</p>
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                        </div>
+                                        <div class="property-footer">
+                                            <div class="author">
+                                                <div class="author-thumb">
+                                                    <img src="{% static 'images/thumb/properties/author/two.png' %}"
+                                                         alt="Image">
+                                                </div>
+                                                <div class="author-meta">
+                                                    <p>Jackson Mica</p>
+                                                    <p>East Agents</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer-cta">
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-heart"></i>
+                                                    <span class="tool">Wishlist</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-shared-vision"></i>
+                                                    <span class="tool">Quick View</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-add"></i>
+                                                    <span class="tool">Project Details</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="property-three__single">
+                                    <div class="thumb-wrapper">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/three.png' %}" alt="Image">
+                                            </a>
+                                            <div class="tag">
+                                                <span class="feature-tag">Feature</span>
+                                                <span class="sold-tag">Sold</span>
+                                            </div>
+                                            <div class="price-tag">
+                                                <span>$1,500/mo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+
+                                        <h4><a href="property-details.html">Weston Hight Place</a></h4>
+                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                            Bridgewater, NJ
+                                            08</p>
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                        </div>
+                                        <div class="property-footer">
+                                            <div class="author">
+                                                <div class="author-thumb">
+                                                    <img src="{% static 'images/thumb/properties/author/three.png' %}"
+                                                         alt="Image">
+                                                </div>
+                                                <div class="author-meta">
+                                                    <p>Micky Arthor</p>
+                                                    <p>East Agents</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer-cta">
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-heart"></i>
+                                                    <span class="tool">Wishlist</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-shared-vision"></i>
+                                                    <span class="tool">Quick View</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-add"></i>
+                                                    <span class="tool">Project Details</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="property-three__single">
+                                    <div class="thumb-wrapper">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/one.png' %}" alt="Image">
+                                            </a>
+                                            <div class="tag">
+                                                <span class="feature-tag">Feature</span>
+                                                <span class="sold-tag">Sold</span>
+                                            </div>
+                                            <div class="price-tag">
+                                                <span>$1,200/mo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+
+                                        <h4><a href="property-details.html">Luxury Home Appoint </a></h4>
+                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                            Bridgewater, NJ
+                                            08</p>
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                        </div>
+                                        <div class="property-footer">
+                                            <div class="author">
+                                                <div class="author-thumb">
+                                                    <img src="{% static 'images/thumb/properties/author/one.png' %}"
+                                                         alt="Image">
+                                                </div>
+                                                <div class="author-meta">
+                                                    <p>Wiliam Siman</p>
+                                                    <p>East Agents</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer-cta">
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-heart"></i>
+                                                    <span class="tool">Wishlist</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-shared-vision"></i>
+                                                    <span class="tool">Quick View</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-add"></i>
+                                                    <span class="tool">Project Details</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="property-three__single">
+                                    <div class="thumb-wrapper">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/two.png' %}" alt="Image">
+                                            </a>
+                                            <div class="tag">
+                                                <span class="feature-tag">Feature</span>
+                                                <span class="sold-tag">Sold</span>
+                                            </div>
+                                            <div class="price-tag">
+                                                <span>$1,500/mo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+
+                                        <h4><a href="property-details.html">House on the Clarita</a></h4>
+                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                            Bridgewater, NJ
+                                            08</p>
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                        </div>
+                                        <div class="property-footer">
+                                            <div class="author">
+                                                <div class="author-thumb">
+                                                    <img src="{% static 'images/thumb/properties/author/two.png' %}"
+                                                         alt="Image">
+                                                </div>
+                                                <div class="author-meta">
+                                                    <p>Jackson Mica</p>
+                                                    <p>East Agents</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer-cta">
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-heart"></i>
+                                                    <span class="tool">Wishlist</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-shared-vision"></i>
+                                                    <span class="tool">Quick View</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-add"></i>
+                                                    <span class="tool">Project Details</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="property-three__single">
+                                    <div class="thumb-wrapper">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/three.png' %}" alt="Image">
+                                            </a>
+                                            <div class="tag">
+                                                <span class="feature-tag">Feature</span>
+                                                <span class="sold-tag">Sold</span>
+                                            </div>
+                                            <div class="price-tag">
+                                                <span>$1,500/mo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+
+                                        <h4><a href="property-details.html">Weston Hight Place</a></h4>
+                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                            Bridgewater, NJ
+                                            08</p>
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                        </div>
+                                        <div class="property-footer">
+                                            <div class="author">
+                                                <div class="author-thumb">
+                                                    <img src="{% static 'images/thumb/properties/author/three.png' %}"
+                                                         alt="Image">
+                                                </div>
+                                                <div class="author-meta">
+                                                    <p>Micky Arthor</p>
+                                                    <p>East Agents</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer-cta">
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-heart"></i>
+                                                    <span class="tool">Wishlist</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-shared-vision"></i>
+                                                    <span class="tool">Quick View</span>
+                                                </a>
+                                                <a href="property-details.html">
+                                                    <i class="flaticon-add"></i>
+                                                    <span class="tool">Project Details</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-one">
+                            <div class="property-three-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==== / property three section end ==== -->
+
+    <!-- ==== who we are section start ==== -->
+    <section class="who">
+        <div class="container">
+            <div class="row vertical-column-gap">
+                <div class="col-12 col-xl-6">
+                    <div class="who__thumb">
+                        <div class="thumb-lg" data-aos="zoom-in" data-aos-duration="1200">
+                            <img src="{% static 'images/thumb/who/thumb-lg.png' %}" alt="Image">
+                        </div>
+                        <div class="thumb-sm">
+                            <img src="{% static 'images/thumb/who/thumb-sm.png' %}" alt="Image" data-aos="zoom-in"
+                                 data-aos-duration="1200" data-aos-delay="200">
+                            <div class="video-btn-wrapper">
+                                <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
+                                   title="video Player" class="open-video-popup">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="who__content">
+                        <div class="section__header">
+                            <span>Who We Are</span>
+                            <h2 class="title-animation">We Provide You Best Service
+                                Of Real Estate Industries</h2>
+                            <div class="icon-thumb">
+                                <div class="icon-thumb-single">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                            </div>
+                        </div>
+                        <div class="about__content-inner">
+                            <p>Over 39,000 people work for us in more than 70 countries all over the This
+                                breadth of global coverage, combined with specialist services</p>
+
+                            <div class="about-content__wrapper">
+                                <div class="about__content-single">
+                                    <div class="thumb">
+                                        <i class="flaticon-mansion"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h6>The Perfect Residency</h6>
+                                    </div>
+                                </div>
+                                <div class="about__content-single">
+                                    <div class="thumb">
+                                        <i class="flaticon-modern-house"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h6>Architect Experts</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>when an unknown printer took a galley of type ancestry scram bled it to
+                                make a type specimen book has survived not only centurial with the release of
+                                Letterset sheets containing Lorem Ipsum passages, and more recently.</p>
+                            <div class="cta">
+                                <a href="contact-us.html" class="btn--primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="z-shape d-none d-xl-block"></div>
+        <div class="z-shape-l d-none d-xl-block"></div>
+        <div class="z-shape-s d-none d-xl-block"></div>
+        <div class="z-shape-sq d-none d-xl-block"></div>
+    </section>
+    <!-- ==== / who we are section end ==== -->
+
+    <!-- ==== explore section start ==== -->
+    <section class="explore-two">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-6">
+                    <div class="section__header text-center">
+                        <span>Top Areas</span>
+                        <h2 class="title-animation">Explore Properties</h2>
+                        <div class="icon-thumb justify-content-center">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="explore-two-slider-wrapper">
+                        <div class="explore-two-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="explore-two__single">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/area/area-one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+                                        <a href="property-details.html" class="arr">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </a>
+                                        <div class="content">
+                                            <h3><a href="property-details.html">New York City</a></h3>
+                                            <p>Listing : 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="explore-two__single">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/area/area-one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+                                        <a href="property-details.html" class="arr">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </a>
+                                        <div class="content">
+                                            <h3><a href="property-details.html">Japan</a></h3>
+                                            <p>Listing : 4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="explore-two__single">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/area/area-one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+                                        <a href="property-details.html" class="arr">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </a>
+                                        <div class="content">
+                                            <h3><a href="property-details.html">Los Angeles</a></h3>
+                                            <p>Listing : 5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="explore-two__single">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/area/area-one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+                                        <a href="property-details.html" class="arr">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </a>
+                                        <div class="content">
+                                            <h3><a href="property-details.html">New York City</a></h3>
+                                            <p>Listing : 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="explore-two__single">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/area/area-one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+                                        <a href="property-details.html" class="arr">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </a>
+                                        <div class="content">
+                                            <h3><a href="property-details.html">Japan</a></h3>
+                                            <p>Listing : 4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="explore-two__single">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/area/area-one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+                                        <a href="property-details.html" class="arr">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </a>
+                                        <div class="content">
+                                            <h3><a href="property-details.html">Los Angeles</a></h3>
+                                            <p>Listing : 5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-navigation-wrapper">
+                            <div class="slider-navigation">
+                                <button type="button" aria-label="next slide" title="next slide"
+                                        class="next-explore slider-btn">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                                <button type="button" aria-label="prev slide" title="prev slide"
+                                        class="prev-explore slider-btn">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="explore__inner" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="row align-items-center vertical-column-gap-sm">
+                            <div class="col-12 col-lg-8">
+                                <div class="section__header--secondary">
+                                    <h3>+1300 Available Properties</h3>
+                                    <p>The Alexis best suited to your lifestyle and the agents who know them best.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="text-start text-lg-end">
+                                    <a href="properties-grid-view.html" class="btn--primary">Explore All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / explore section end ==== -->
+
+    <!-- ==== exclusive section start ==== -->
+    <section class="exclusive">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xxl-6">
+                    <div class="exclusive__content">
+                        <div class="section__header">
+                            <span>Our Properties</span>
+                            <h2 class="title-animation">Our Exclusive Listings</h2>
+                            <div class="icon-thumb">
+                                <div class="icon-thumb-single">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img-white">
+                            </div>
+                        </div>
+                        <div class="exclusive-slider-wrapper">
+                            <div class="exclusive-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="exclusive__single">
+                                            <span class="tag">For Sale</span>
+                                            <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                                Bridgewater,
+                                                NJ 08</p>
+                                            <h2><a href="property-details.html">Independent Apartment
+                                                With Modern Design</a></h2>
+                                            <p>Temporibus autem quibusdam et aut officis debitis is aut
+                                                non mes for Creating futures through building pres Creating
+                                                preservation etes quibusdam.</p>
+                                            <div class="specifications">
+                                                <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                                <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                                <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="exclusive__single">
+                                            <span class="tag">For Sale</span>
+                                            <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                                Bridgewater,
+                                                NJ 08</p>
+                                            <h2><a href="property-details.html">Independent Apartment
+                                                With Modern Design</a></h2>
+                                            <p>Temporibus autem quibusdam et aut officis debitis is aut
+                                                non mes for Creating futures through building pres Creating
+                                                preservation etes quibusdam.</p>
+                                            <div class="specifications">
+                                                <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                                <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                                <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="exclusive__single">
+                                            <span class="tag">For Sale</span>
+                                            <p class="location"><span class="icon-location"></span> 798 Talbot St.
+                                                Bridgewater,
+                                                NJ 08</p>
+                                            <h2><a href="property-details.html">Independent Apartment
+                                                With Modern Design</a></h2>
+                                            <p>Temporibus autem quibusdam et aut officis debitis is aut
+                                                non mes for Creating futures through building pres Creating
+                                                preservation etes quibusdam.</p>
+                                            <div class="specifications">
+                                                <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>
+                                                <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>
+                                                <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-navigation d-none d-lg-flex">
+                                <button type="button" aria-label="next slide" title="next slide"
+                                        class="next-exclusive slider-btn">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                                <button type="button" aria-label="prev slide" title="prev slide"
+                                        class="prev-exclusive slider-btn">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="exclusive__thumb exclusive-thumb-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="thumb-single">
+                                    <a href="property-details.html">
+                                        <img src="{% static 'images/property/large-slide.png' %}" alt="Image">
+                                    </a>
+                                    <div class="content">
+                                        <div class="tag-wrap">
+                                            <span>Featured</span>
+                                            <span class="tag-sold">Sold</span>
+                                        </div>
+                                        <div class="meta">
+                                            <p>Start From</p>
+                                            <h2> $ 356,3540</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="thumb-single">
+                                    <a href="property-details.html">
+                                        <img src="{% static 'images/property/details-poster.png' %}" alt="Image">
+                                    </a>
+                                    <div class="content">
+                                        <div class="tag-wrap">
+                                            <span>Featured</span>
+                                            <span class="tag-sold">Sold</span>
+                                        </div>
+                                        <div class="meta">
+                                            <p>Start From</p>
+                                            <h2> $ 300,3540</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="thumb-single">
+                                    <a href="property-details.html">
+                                        <img src="{% static 'images/property/video-poster.png' %}" alt="Image">
+                                    </a>
+                                    <div class="content">
+                                        <div class="tag-wrap">
+                                            <span>Featured</span>
+                                            <span class="tag-sold">Sold</span>
+                                        </div>
+                                        <div class="meta">
+                                            <p>Start From</p>
+                                            <h2> $ 356,3540</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-navigation d-flex d-lg-none">
+                        <button type="button" aria-label="next slide" title="next slide"
+                                class="next-exclusive slider-btn">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                        <button type="button" aria-label="prev slide" title="prev slide"
+                                class="prev-exclusive slider-btn">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="shape-three"></div>
+        <div class="shape-four"></div>
+    </section>
+    <!-- ==== exclusive section end ==== -->
+
+    <!-- ==== procedure section start ==== -->
+    <section class="procedure">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="section__header text-center">
+                        <span>Steps of Procedure</span>
+                        <h2 class="title-animation">Some Steps to Get Your Property</h2>
+                        <div class="icon-thumb justify-content-center">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="procedure__inner">
+                        <div class="row vertical-column-gap-lg">
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="procedure__single" data-aos="fade-up" data-aos-duration="1200">
+                                    <div class="thumb">
+                                        <i class="flaticon-realtor"></i>
+
+                                    </div>
+                                    <div class="content">
+                                        <h4>Meet Our Agent</h4>
+                                        <p>You Meet our agent and decuse
+                                            your property Demand</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="procedure__single procedure__single-alter" data-aos="fade-up"
+                                     data-aos-duration="1200" data-aos-delay="200">
+                                    <div class="thumb">
+                                        <i class="flaticon-selection"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Choose Location</h4>
+                                        <p>You Meet our agent and decuse
+                                            your property Demand</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="procedure__single procedure__single-alter" data-aos="fade-up"
+                                     data-aos-duration="1200" data-aos-delay="400">
+                                    <div class="thumb">
+                                        <i class="flaticon-house-2"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Select Property</h4>
+                                        <p>You Meet our agent and decuse
+                                            your property Demand</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="procedure__single" data-aos="fade-up" data-aos-duration="1200"
+                                     data-aos-delay="600">
+                                    <div class="thumb">
+                                        <i class="flaticon-rent-1"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Confirmation</h4>
+                                        <p>You Meet our agent and decuse
+                                            your property Demand</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <img src="{% static 'images/icon/line.png' %}" alt="Image" class="filter-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / procedure section end ==== -->
+
+    <!-- ==== testimonial section start ==== -->
+    <section class="testimonial-two"
+             data-background="{% static 'images/testimonial/bg-one.png' %}, {% static 'images/testimonial/bg-two.png,' %}">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-5">
+                    <div class="section__header text-center">
+                        <span>Some Our Happy Clients</span>
+                        <h2 class="title-animation">Customers Review</h2>
+                        <div class="icon-thumb justify-content-center">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-white">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-11">
+                    <div class="testimonial-two__inner">
+                        <div class="testimonial-two-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-two__single">
+                                        <div class="author">
+                                            <div class="author-meta">
+                                                <p>Happy Cusotmer</p>
+                                                <h5>Kliva Devs</h5>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="author-thumb">
+                                                <img src="{% static 'images/testimonial/client.png' %}" alt="Image">
+                                            </div>
+                                        </div>
+                                        <div class="author-review">
+                                            <h5>Excellent Service</h5>
+                                            <blockquote>
+                                                <q>Engage with our professional real estate agents sell buy
+                                                    or rent your home ae we Get emails directly area in falls
+                                                    box and every manage the lead ithe</q>
+                                            </blockquote>
+                                        </div>
+                                        <div class="border-line">
+                                            <img src="{% static 'images/testimonial/line.png' %}" alt="Image">
+                                            <img src="{% static 'images/testimonial/left-qt.png' %}" alt="Image"
+                                                 class="left-quote filter-img-s">
+                                            <img src="{% static 'images/testimonial/right-qt.png' %}" alt="Image"
+                                                 class="right-quote filter-img-s">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-two__single">
+                                        <div class="author">
+                                            <div class="author-meta">
+                                                <p>Happy Cusotmer</p>
+                                                <h5>Kliva Devs</h5>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="author-thumb">
+                                                <img src="{% static 'images/testimonial/client-two.png' %}" alt="Image">
+                                            </div>
+                                        </div>
+                                        <div class="author-review">
+                                            <h5>Excellent Service</h5>
+                                            <blockquote>
+                                                <q>Engage with our professional real estate agents sell buy
+                                                    or rent your home ae we Get emails directly area in falls
+                                                    box and every manage the lead ithe</q>
+                                            </blockquote>
+                                        </div>
+                                        <div class="border-line">
+                                            <img src="{% static 'images/testimonial/line.png' %}" alt="Image">
+                                            <img src="{% static 'images/testimonial/left-qt.png' %}" alt="Image"
+                                                 class="left-quote filter-img-s">
+                                            <img src="{% static 'images/testimonial/right-qt.png' %}" alt="Image"
+                                                 class="right-quote filter-img-s">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-two__single">
+                                        <div class="author">
+                                            <div class="author-meta">
+                                                <p>Happy Cusotmer</p>
+                                                <h5>Kliva Devs</h5>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="author-thumb">
+                                                <img src="{% static 'images/testimonial/client.png' %}" alt="Image">
+                                            </div>
+                                        </div>
+                                        <div class="author-review">
+                                            <h5>Excellent Service</h5>
+                                            <blockquote>
+                                                <q>Engage with our professional real estate agents sell buy
+                                                    or rent your home ae we Get emails directly area in falls
+                                                    box and every manage the lead ithe</q>
+                                            </blockquote>
+                                        </div>
+                                        <div class="border-line">
+                                            <img src="{% static 'images/testimonial/line.png' %}" alt="Image">
+                                            <img src="{% static 'images/testimonial/left-qt.png' %}" alt="Image"
+                                                 class="left-quote filter-img-s">
+                                            <img src="{% static 'images/testimonial/right-qt.png' %}" alt="Image"
+                                                 class="right-quote filter-img-s">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-two__single">
+                                        <div class="author">
+                                            <div class="author-meta">
+                                                <p>Happy Cusotmer</p>
+                                                <h5>Kliva Devs</h5>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="author-thumb">
+                                                <img src="{% static 'images/testimonial/client-two.png' %}" alt="Image">
+                                            </div>
+                                        </div>
+                                        <div class="author-review">
+                                            <h5>Excellent Service</h5>
+                                            <blockquote>
+                                                <q>Engage with our professional real estate agents sell buy
+                                                    or rent your home ae we Get emails directly area in falls
+                                                    box and every manage the lead ithe</q>
+                                            </blockquote>
+                                        </div>
+                                        <div class="border-line">
+                                            <img src="{% static 'images/testimonial/line.png' %}" alt="Image">
+                                            <img src="{% static 'images/testimonial/left-qt.png' %}" alt="Image"
+                                                 class="left-quote filter-img-s">
+                                            <img src="{% static 'images/testimonial/right-qt.png' %}" alt="Image"
+                                                 class="right-quote filter-img-s">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-two__single">
+                                        <div class="author">
+                                            <div class="author-meta">
+                                                <p>Happy Cusotmer</p>
+                                                <h5>Kliva Devs</h5>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="author-thumb">
+                                                <img src="{% static "images/testimonial/client.png" %}" alt="Image">
+                                            </div>
+                                        </div>
+                                        <div class="author-review">
+                                            <h5>Excellent Service</h5>
+                                            <blockquote>
+                                                <q>Engage with our professional real estate agents sell buy
+                                                    or rent your home ae we Get emails directly area in falls
+                                                    box and every manage the lead ithe</q>
+                                            </blockquote>
+                                        </div>
+                                        <div class="border-line">
+                                            <img src="{% static 'images/testimonial/line.png' %}" alt="Image">
+                                            <img src="{% static 'images/testimonial/left-qt.png' %}" alt="Image"
+                                                 class="left-quote filter-img-s">
+                                            <img src="{% static 'images/testimonial/right-qt.png' %}" alt="Image"
+                                                 class="right-quote filter-img-s">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-two__single">
+                                        <div class="author">
+                                            <div class="author-meta">
+                                                <p>Happy Cusotmer</p>
+                                                <h5>Kliva Devs</h5>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="author-thumb">
+                                                <img src="{% static 'images/testimonial/client-two.png' %}" alt="Image">
+                                            </div>
+                                        </div>
+                                        <div class="author-review">
+                                            <h5>Excellent Service</h5>
+                                            <blockquote>
+                                                <q>Engage with our professional real estate agents sell buy
+                                                    or rent your home ae we Get emails directly area in falls
+                                                    box and every manage the lead ithe</q>
+                                            </blockquote>
+                                        </div>
+                                        <div class="border-line">
+                                            <img src="{% static 'images/testimonial/line.png' %}" alt="Image">
+                                            <img src="{% static 'images/testimonial/left-qt.png' %}" alt="Image"
+                                                 class="left-quote filter-img-s">
+                                            <img src="{% static 'images/testimonial/right-qt.png' %}" alt="Image"
+                                                 class="right-quote filter-img-s">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-one">
+                            <div class="testimonial-two-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="partner-two" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="partner-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/one.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/two.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/three.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/four.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/five.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/one.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/two.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/three.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/four.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="partner-single">
+                                        <a href="properties-grid-view.html">
+                                            <img src="{% static 'images/partners/five.png' %}" alt="Image"
+                                                 class="filter-black">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==== / partner slider end ==== -->
+    </section>
+    <!-- ==== / testimonial section end ==== -->
+
+    <!-- ==== blog section start ==== -->
+    <section class="blog-list blog-list-alt pt-200">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-5">
+                    <div class="section__header text-center">
+                        <span>Our Latest Blog</span>
+                        <h2 class="title-animation">Latest News & Stories</h2>
+                        <div class="icon-thumb justify-content-center">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row vertical-column-gap-lg">
+                <div class="col-12 col-lg-6">
+                    <div class="blog-list__item" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="thumb-wrapper">
+                            <div class="thumb">
+                                <a href="blog-details.html">
+                                    <img src="{% static 'images/blog/blog-two.png' %}" alt="Image">
+                                </a>
+                            </div>
+                            <div class="author">
+                                <i class="flaticon-person"></i> <span>Arian Fox</span>
+                            </div>
+                            <div class="date">
+                                <i class="flaticon-calendar"></i> <span>26 / 08 / 2024</span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4><a href="blog-details.html">Some Easy Way To Buy For Office
+                                A Small
+                                Beautiful Appartment</a></h4>
+                            <p>Pellentesque habitant morbi tristi senectuset netus malesuada fames turpis egestas.
+                                Vestibulum
+                                tortor quam dasdfs ddrewr asdfdf...</p>
+                            <div class="cta">
+                                <a href="blog-details.html" class="btn--primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="blog-list__item" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                        <div class="thumb-wrapper">
+                            <div class="thumb">
+                                <a href="blog-details.html">
+                                    <img src="{% static 'images/blog/blog-three.png' %}" alt="Image">
+                                </a>
+                            </div>
+                            <div class="author">
+                                <i class="flaticon-person"></i> <span>Robert Fox</span>
+                            </div>
+                            <div class="date">
+                                <i class="flaticon-calendar"></i> <span>22 / 08 / 2024</span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4><a href="blog-details.html">Modron Apartment Adjacent To CEO
+                                Park
+                                Demonded</a></h4>
+                            <p>Pellentesque habitant morbi tristi senectuset netus malesuada fames turpis egestas.
+                                Vestibulum
+                                tortor quam dasdfs ddrewr asdfdf...</p>
+                            <div class="cta">
+                                <a href="blog-details.html" class="btn--primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / blog section end ==== -->
+{% endblock content %}
+    <!-- ==== footer start ==== -->
+    <footer class="footer-three" data-background="{% static 'images/footer-bg.png' %}">
+        {% include "includes/_footer.html" %}
+    </footer>
+    <!-- ==== / footer end ==== -->
+
+
+    <!-- ==== mouse cursor drag start ==== -->
+{#    <div class="mouseCursor cursor-outer"></div>#}
+{#    <div class="mouseCursor cursor-inner"></div>#}
+    <!-- ==== / mouse cursor drag end ==== -->
+
+    <!-- ==== scroll to top start ==== -->
+{#    <button class="progress-wrap" aria-label="scroll indicator" title="back to top">#}
+{#        <span></span>#}
+{#        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">#}
+{#            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>#}
+{#        </svg>#}
+{#    </button>#}
+    <!-- ==== / scroll to top end ==== -->
+
+</div>
+
+<!-- ==== js dependencies start ==== -->
+{% include 'includes/_js_dependencies.html' %}
+</body>
+
+</html>

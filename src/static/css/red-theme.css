@@ -1,0 +1,13 @@
+:root {
+  --base-color: #ff5c00;
+}
+
+.filter-img {
+  -webkit-filter: brightness(0) saturate(100%) invert(40%) sepia(75%) saturate(3202%) hue-rotate(1deg) brightness(104%) contrast(105%);
+          filter: brightness(0) saturate(100%) invert(40%) sepia(75%) saturate(3202%) hue-rotate(1deg) brightness(104%) contrast(105%);
+}
+
+.filter-black {
+  -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(75%) saturate(7461%) hue-rotate(109deg) brightness(88%) contrast(92%);
+          filter: brightness(0) saturate(100%) invert(0%) sepia(75%) saturate(7461%) hue-rotate(109deg) brightness(88%) contrast(92%);
+}

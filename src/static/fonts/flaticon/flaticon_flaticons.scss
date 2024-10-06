@@ -1,0 +1,217 @@
+$flaticon_flaticons-font: "flaticon_flaticons";
+
+@font-face {
+    font-family: $flaticon_flaticons-font;
+    src: url("./flaticon_flaticons.woff2?073eb591f55ae58580599a389b64933a") format("woff2"),
+url("./flaticon_flaticons.woff?073eb591f55ae58580599a389b64933a") format("woff"),
+url("./flaticon_flaticons.eot?073eb591f55ae58580599a389b64933a#iefix") format("embedded-opentype"),
+url("./flaticon_flaticons.ttf?073eb591f55ae58580599a389b64933a") format("truetype"),
+url("./flaticon_flaticons.svg?073eb591f55ae58580599a389b64933a#flaticon_flaticons") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_flaticons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_flaticons-map: (
+    "pool-lighting": "\f101",
+    "house": "\f102",
+    "facebook": "\f103",
+    "twitter": "\f104",
+    "instagram": "\f105",
+    "linkedin": "\f106",
+    "phone-call": "\f107",
+    "levels": "\f108",
+    "mansion": "\f109",
+    "modern-house": "\f10a",
+    "buy-home": "\f10b",
+    "rent": "\f10c",
+    "deal": "\f10d",
+    "double-bed": "\f10e",
+    "bathroom": "\f10f",
+    "house-design": "\f110",
+    "heart": "\f111",
+    "shared-vision": "\f112",
+    "add": "\f113",
+    "town": "\f114",
+    "house-for-sale": "\f115",
+    "house-1": "\f116",
+    "customer-satisfaction": "\f117",
+    "quotes": "\f118",
+    "share": "\f119",
+    "person": "\f11a",
+    "calendar": "\f11b",
+    "house-2": "\f11c",
+    "location": "\f11d",
+    "shield": "\f11e",
+    "skyscrapers": "\f11f",
+    "office": "\f120",
+    "villa": "\f121",
+    "house-3": "\f122",
+    "villa-1": "\f123",
+    "rent-1": "\f124",
+    "realtor": "\f125",
+    "selection": "\f126",
+    "time-management": "\f127",
+    "price-tag": "\f128",
+    "office-1": "\f129",
+    "garage": "\f12a",
+    "beds": "\f12b",
+    "home": "\f12c",
+    "house-key": "\f12d",
+    "location-1": "\f12e",
+    "shower": "\f12f",
+    "first-aid-kit": "\f130",
+);
+
+.flaticon-pool-lighting:before {
+    content: map-get($flaticon_flaticons-map, "pool-lighting");
+}
+.flaticon-house:before {
+    content: map-get($flaticon_flaticons-map, "house");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon_flaticons-map, "facebook");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon_flaticons-map, "twitter");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon_flaticons-map, "instagram");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon_flaticons-map, "linkedin");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon_flaticons-map, "phone-call");
+}
+.flaticon-levels:before {
+    content: map-get($flaticon_flaticons-map, "levels");
+}
+.flaticon-mansion:before {
+    content: map-get($flaticon_flaticons-map, "mansion");
+}
+.flaticon-modern-house:before {
+    content: map-get($flaticon_flaticons-map, "modern-house");
+}
+.flaticon-buy-home:before {
+    content: map-get($flaticon_flaticons-map, "buy-home");
+}
+.flaticon-rent:before {
+    content: map-get($flaticon_flaticons-map, "rent");
+}
+.flaticon-deal:before {
+    content: map-get($flaticon_flaticons-map, "deal");
+}
+.flaticon-double-bed:before {
+    content: map-get($flaticon_flaticons-map, "double-bed");
+}
+.flaticon-bathroom:before {
+    content: map-get($flaticon_flaticons-map, "bathroom");
+}
+.flaticon-house-design:before {
+    content: map-get($flaticon_flaticons-map, "house-design");
+}
+.flaticon-heart:before {
+    content: map-get($flaticon_flaticons-map, "heart");
+}
+.flaticon-shared-vision:before {
+    content: map-get($flaticon_flaticons-map, "shared-vision");
+}
+.flaticon-add:before {
+    content: map-get($flaticon_flaticons-map, "add");
+}
+.flaticon-town:before {
+    content: map-get($flaticon_flaticons-map, "town");
+}
+.flaticon-house-for-sale:before {
+    content: map-get($flaticon_flaticons-map, "house-for-sale");
+}
+.flaticon-house-1:before {
+    content: map-get($flaticon_flaticons-map, "house-1");
+}
+.flaticon-customer-satisfaction:before {
+    content: map-get($flaticon_flaticons-map, "customer-satisfaction");
+}
+.flaticon-quotes:before {
+    content: map-get($flaticon_flaticons-map, "quotes");
+}
+.flaticon-share:before {
+    content: map-get($flaticon_flaticons-map, "share");
+}
+.flaticon-person:before {
+    content: map-get($flaticon_flaticons-map, "person");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon_flaticons-map, "calendar");
+}
+.flaticon-house-2:before {
+    content: map-get($flaticon_flaticons-map, "house-2");
+}
+.flaticon-location:before {
+    content: map-get($flaticon_flaticons-map, "location");
+}
+.flaticon-shield:before {
+    content: map-get($flaticon_flaticons-map, "shield");
+}
+.flaticon-skyscrapers:before {
+    content: map-get($flaticon_flaticons-map, "skyscrapers");
+}
+.flaticon-office:before {
+    content: map-get($flaticon_flaticons-map, "office");
+}
+.flaticon-villa:before {
+    content: map-get($flaticon_flaticons-map, "villa");
+}
+.flaticon-house-3:before {
+    content: map-get($flaticon_flaticons-map, "house-3");
+}
+.flaticon-villa-1:before {
+    content: map-get($flaticon_flaticons-map, "villa-1");
+}
+.flaticon-rent-1:before {
+    content: map-get($flaticon_flaticons-map, "rent-1");
+}
+.flaticon-realtor:before {
+    content: map-get($flaticon_flaticons-map, "realtor");
+}
+.flaticon-selection:before {
+    content: map-get($flaticon_flaticons-map, "selection");
+}
+.flaticon-time-management:before {
+    content: map-get($flaticon_flaticons-map, "time-management");
+}
+.flaticon-price-tag:before {
+    content: map-get($flaticon_flaticons-map, "price-tag");
+}
+.flaticon-office-1:before {
+    content: map-get($flaticon_flaticons-map, "office-1");
+}
+.flaticon-garage:before {
+    content: map-get($flaticon_flaticons-map, "garage");
+}
+.flaticon-beds:before {
+    content: map-get($flaticon_flaticons-map, "beds");
+}
+.flaticon-home:before {
+    content: map-get($flaticon_flaticons-map, "home");
+}
+.flaticon-house-key:before {
+    content: map-get($flaticon_flaticons-map, "house-key");
+}
+.flaticon-location-1:before {
+    content: map-get($flaticon_flaticons-map, "location-1");
+}
+.flatflaticon-bathroom:before {
+    content: map-get($flaticon_flaticons-map, "shower");
+}
+.flaticon-first-aid-kit:before {
+    content: map-get($flaticon_flaticons-map, "first-aid-kit");
+}
