@@ -1,26 +1,13 @@
-import uuid
-
-from django.conf import settings
 from django.contrib.auth import get_user_model, login
 from django.contrib.auth.views import LoginView, LogoutView
-from django.core.mail import send_mail
+
 from django.http import HttpRequest, HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, RedirectView, TemplateView
+from django.views.generic import CreateView, RedirectView
 
 from accounts.forms import UserLoginForm, UserRegistrationForm
 from accounts.services.send_registration_email import send_registration_email
 from accounts.utils.token_generator import TokenGenerator
-
-# def send_test_email(request: HttpRequest) -> HttpResponse:
-#     send_mail(
-#         subject="Test email",
-#         message="Test email, BRO",
-#         from_email=settings.EMAIL_HOST_USER,
-#         recipient_list=[settings.EMAIL_HOST_USER, "gleb1395@gmail.com"],
-#         fail_silently=settings.EMAIL_FAIL_SILENTLY,
-#     )
-#     return HttpResponse("SUPER!!!")
 
 
 class UserRegistrationView(CreateView):

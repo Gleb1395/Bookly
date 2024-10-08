@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-        <div class="authentication">
+    <div class="authentication">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8 col-xl-6">
@@ -34,12 +34,16 @@
                                 </div>
                             </form>
                             <div class="auth-cta" data-aos="fade-up" data-aos-duration="1200">
-                                <button>
-                                    <img src="{% static "images/google.png" %}" alt="Image">
-                                </button>
-                                <button>
-                                    <img src="{% static "images/meta.png" %}" alt="Image">
-                                </button>
+                                <a href="{% url 'social:begin' 'google-oauth2' %}">
+                                    <button>
+                                        <img src="{% static 'images/google.png' %}" alt="Google Image">
+                                    </button>
+                                </a>
+                                <a href="{% url 'social:begin' 'github' %}">
+                                    <button>
+                                        <img src="{% static "images/github-mark-white.png" %}" alt="Image">
+                                    </button>
+                                </a>
                             </div>
                         </div>
                         <div class="auth-footer">

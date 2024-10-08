@@ -93,17 +93,17 @@
                             </form>
                             <div class="auth-cta" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
                                 <button>
-                                    <img src="assets/images/google.png" alt="Image">
+                                    <img src="{% static 'images/google.png' %}" alt="Image">
                                 </button>
                                 <button>
-                                    <img src="assets/images/meta.png" alt="Image">
+                                    <img src="{% static 'images/github-mark-white.png' %}" alt="Image">
                                 </button>
                             </div>
                         </div>
                         <div class="auth-footer">
                             <p>
                                 Have an account?
-                                <a href="sign-in.html">Sign In!</a>
+                                <a href="{% url 'sign-in' %}">Sign In!</a>
                             </p>
                         </div>
                     </div>
