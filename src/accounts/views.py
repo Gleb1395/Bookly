@@ -71,6 +71,3 @@ class ActiveUserView(RedirectView):
             login(request, current_user)
             return super().get(request, *args, **kwargs)
         return HttpResponse("Wrong data!!!")
-
-
-
