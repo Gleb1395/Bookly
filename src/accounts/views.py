@@ -6,11 +6,12 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.core.mail import send_mail
 from django.http import HttpRequest, HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, RedirectView
+from django.views.generic import CreateView, RedirectView, TemplateView
 
 from accounts.forms import UserLoginForm, UserRegistrationForm
 from accounts.services.send_registration_email import send_registration_email
 from accounts.utils.token_generator import TokenGenerator
+
 
 # def send_test_email(request: HttpRequest) -> HttpResponse:
 #     send_mail(
@@ -71,3 +72,6 @@ class ActiveUserView(RedirectView):
             login(request, current_user)
             return super().get(request, *args, **kwargs)
         return HttpResponse("Wrong data!!!")
+
+class DebugPage(TemplateView):
+    template_name = 'emails/registration_email.html'
