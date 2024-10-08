@@ -12,7 +12,6 @@ from accounts.forms import UserLoginForm, UserRegistrationForm
 from accounts.services.send_registration_email import send_registration_email
 from accounts.utils.token_generator import TokenGenerator
 
-
 # def send_test_email(request: HttpRequest) -> HttpResponse:
 #     send_mail(
 #         subject="Test email",
@@ -73,5 +72,5 @@ class ActiveUserView(RedirectView):
             return super().get(request, *args, **kwargs)
         return HttpResponse("Wrong data!!!")
 
-class DebugPage(TemplateView):
-    template_name = 'emails/registration_email.html'
+
+
