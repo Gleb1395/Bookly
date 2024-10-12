@@ -26,3 +26,6 @@ def send_registration_email(user_instance: get_user_model(), request: HttpReques
     )
     email.content_subtype = "html"
     email.send(fail_silently=settings.EMAIL_FAIL_SILENTLY)
+
+
+

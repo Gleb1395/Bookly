@@ -1,11 +1,14 @@
 from django.contrib.auth import get_user_model, login
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetConfirmView, \
+    PasswordResetCompleteView
+from django.contrib.messages.views import SuccessMessageMixin
 
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, RedirectView
 
-from accounts.forms import UserLoginForm, UserRegistrationForm
+from accounts.forms import UserLoginForm, UserRegistrationForm, UserResetPasswordForm
+
 from accounts.services.send_registration_email import send_registration_email
 from accounts.utils.token_generator import TokenGenerator
 
@@ -55,6 +58,30 @@ class ActiveUserView(RedirectView):
         if current_user and TokenGenerator().check_token(current_user, token):
             current_user.is_active = True
             current_user.save()
+            current_user.backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, current_user)
             return super().get(request, *args, **kwargs)
         return HttpResponse("Wrong data!!!")
+
+
+class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
+    template_name = 'emails/password_reset.html'
+    form_class = UserResetPasswordForm
+    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        email = form.cleaned_data['email']
+        user = get_user_model()
+        if user.object.filter(email=email).exists():
+            return super().form_valid(form)
+        return super().form_invalid(form)
+
+
+class PasswordResetConfirmView(SuccessMessageMixin, PasswordResetConfirmView):
+    template_name = 'emails/password_reset_confirm.html'
+
+
+class PasswordResetCompleteView(SuccessMessageMixin, PasswordResetCompleteView):
+    template_name = 'emails/password_reset_complete.html'
+
+

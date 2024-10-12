@@ -48,6 +48,7 @@ class Hotel(models.Model):
         return f"{self.hotel_name} by {self.city}"
 
 
+
 class Room(models.Model):
     """
     A model to represent a room in a hotel.
