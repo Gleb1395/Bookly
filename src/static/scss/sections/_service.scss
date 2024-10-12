@@ -1,0 +1,178 @@
+/* ==== 
+ --------- (5.03) service section styles start ---------
+ ==== */
+
+.service {
+  padding: 100px 0px;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+
+  .service__single {
+    text-align: center;
+    padding: 40px 32px;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0px;
+      width: 100%;
+      height: calc(100% - 66px);
+      background-color: var(--white);
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      z-index: -1;
+      transition: var(--transition);
+    }
+
+    h4 {
+      font-weight: 600;
+      color: var(--quaternary-color);
+      margin: 26px 0px 20px;
+      &:hover {
+        color: var(--base-color);
+      }
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 26px;
+      color: #555555;
+    }
+    &:hover {
+      &::before {
+        height: 100%;
+      }
+    }
+
+    .thumb {
+      i {
+        font-size: 64px;
+        color: var(--black);
+      }
+    }
+  }
+
+  .service__single-active {
+    h4 {
+      color: var(--base-color);
+    }
+    &::before {
+      height: 100%;
+    }
+
+    .btn--primary {
+      border: 1px solid var(--base-color);
+      &::after {
+        right: calc(100% - 8px);
+      }
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// service main
+.service-main {
+  background-color: var(--white);
+
+  .service__single {
+    background-color: var(--white);
+    border: 1px solid #aaaaaa;
+    transition: var(--transition);
+    overflow: hidden;
+    z-index: 1;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-110%);
+      border-radius: 50%;
+      z-index: -1;
+      transition: var(--transition);
+    }
+
+    &::before {
+      width: 160px;
+      height: 160px;
+      background-color: #3183ff;
+      transition-delay: 100ms;
+    }
+
+    &::after {
+      width: 200px;
+      height: 200px;
+      background-color: #0065fe;
+      z-index: -2;
+    }
+
+    p,
+    img {
+      transition: var(--transition);
+    }
+
+    .thumb {
+      i {
+        transition: var(--transition);
+      }
+    }
+
+    .bg-thumb {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      transition: var(--transition);
+      transform: translateX(100%);
+    }
+
+    &:hover {
+      border-color: var(--base-color);
+      background-color: var(--base-color);
+
+      .bg-thumb {
+        transform: translateX(0px);
+      }
+
+      .thumb {
+        i {
+          color: var(--white);
+        }
+      }
+
+      h4 {
+        color: var(--white);
+      }
+
+      p {
+        color: var(--white);
+      }
+
+      &::before {
+        height: 160px;
+      }
+
+      &::before,
+      &::after {
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      .btn--primary {
+        border: 1px solid var(--base-color);
+        &::after {
+          right: calc(100% - 8px);
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.03) service section styles end ---------
+ ==== */

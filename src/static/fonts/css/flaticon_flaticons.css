@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "flaticon_flaticons";
+  src: url("./flaticon_flaticons.woff2?073eb591f55ae58580599a389b64933a") format("woff2"), url("./flaticon_flaticons.woff?073eb591f55ae58580599a389b64933a") format("woff"), url("./flaticon_flaticons.eot?073eb591f55ae58580599a389b64933a#iefix") format("embedded-opentype"), url("./flaticon_flaticons.ttf?073eb591f55ae58580599a389b64933a") format("truetype"), url("./flaticon_flaticons.svg?073eb591f55ae58580599a389b64933a#flaticon_flaticons") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon_flaticons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-pool-lighting:before {
+  content: "\f101";
+}
+
+.flaticon-house:before {
+  content: "\f102";
+}
+
+.flaticon-facebook:before {
+  content: "\f103";
+}
+
+.flaticon-twitter:before {
+  content: "\f104";
+}
+
+.flaticon-instagram:before {
+  content: "\f105";
+}
+
+.flaticon-linkedin:before {
+  content: "\f106";
+}
+
+.flaticon-phone-call:before {
+  content: "\f107";
+}
+
+.flaticon-levels:before {
+  content: "\f108";
+}
+
+.flaticon-mansion:before {
+  content: "\f109";
+}
+
+.flaticon-modern-house:before {
+  content: "\f10a";
+}
+
+.flaticon-buy-home:before {
+  content: "\f10b";
+}
+
+.flaticon-rent:before {
+  content: "\f10c";
+}
+
+.flaticon-deal:before {
+  content: "\f10d";
+}
+
+.flaticon-double-bed:before {
+  content: "\f10e";
+}
+
+.flaticon-bathroom:before {
+  content: "\f10f";
+}
+
+.flaticon-house-design:before {
+  content: "\f110";
+}
+
+.flaticon-heart:before {
+  content: "\f111";
+}
+
+.flaticon-shared-vision:before {
+  content: "\f112";
+}
+
+.flaticon-add:before {
+  content: "\f113";
+}
+
+.flaticon-town:before {
+  content: "\f114";
+}
+
+.flaticon-house-for-sale:before {
+  content: "\f115";
+}
+
+.flaticon-house-1:before {
+  content: "\f116";
+}
+
+.flaticon-customer-satisfaction:before {
+  content: "\f117";
+}
+
+.flaticon-quotes:before {
+  content: "\f118";
+}
+
+.flaticon-share:before {
+  content: "\f119";
+}
+
+.flaticon-person:before {
+  content: "\f11a";
+}
+
+.flaticon-calendar:before {
+  content: "\f11b";
+}
+
+.flaticon-house-2:before {
+  content: "\f11c";
+}
+
+.flaticon-location:before {
+  content: "\f11d";
+}
+
+.flaticon-shield:before {
+  content: "\f11e";
+}
+
+.flaticon-skyscrapers:before {
+  content: "\f11f";
+}
+
+.flaticon-office:before {
+  content: "\f120";
+}
+
+.flaticon-villa:before {
+  content: "\f121";
+}
+
+.flaticon-house-3:before {
+  content: "\f122";
+}
+
+.flaticon-villa-1:before {
+  content: "\f123";
+}
+
+.flaticon-rent-1:before {
+  content: "\f124";
+}
+
+.flaticon-realtor:before {
+  content: "\f125";
+}
+
+.flaticon-selection:before {
+  content: "\f126";
+}
+
+.flaticon-time-management:before {
+  content: "\f127";
+}
+
+.flaticon-price-tag:before {
+  content: "\f128";
+}
+
+.flaticon-office-1:before {
+  content: "\f129";
+}
+
+.flaticon-garage:before {
+  content: "\f12a";
+}
+
+.flaticon-beds:before {
+  content: "\f12b";
+}
+
+.flaticon-home:before {
+  content: "\f12c";
+}
+
+.flaticon-house-key:before {
+  content: "\f12d";
+}
+
+.flaticon-location-1:before {
+  content: "\f12e";
+}
+
+.flatflaticon-bathroom:before {
+  content: "\f12f";
+}
+
+.flaticon-first-aid-kit:before {
+  content: "\f130";
+}

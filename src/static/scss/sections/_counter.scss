@@ -1,0 +1,62 @@
+/* ==== 
+ --------- (5.05) counter section styles start ---------
+ ==== */
+.counter {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--quaternary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+
+  div {
+    line-height: unset;
+  }
+
+  .thumb {
+    margin-bottom: 20px;
+    padding-top: 16px;
+    padding-right: 16px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(rgba(170, 170, 170, 0) 0%, #999 100%);
+      z-index: -1;
+    }
+
+    i {
+      font-size: 64px;
+      color: var(--white);
+    }
+  }
+  .counter__single {
+    text-align: center;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    p {
+      font-family: var(--montserrat);
+      color: var(--white);
+      margin-top: 12px;
+      font-weight: 500;
+    }
+  }
+}
+/* ==== 
+ --------- (5.05) counter section styles end ---------
+ ==== */

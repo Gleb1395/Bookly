@@ -1,0 +1,114 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <div class="authentication">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 col-xl-6">
+                    <div class="authentication__wrapper">
+                        <div class="authentication__inner">
+
+                            <form action="#" method="post">
+                                {% csrf_token %}
+                                {% if form.errors %}
+                                    <div class="form-error">
+                                        <p>Что-то пошло не так. Пожалуйста, проверьте форму на ошибки.</p>
+                                    </div>
+                                {% endif %}
+                                <div class="input-single" data-aos="fade-up" data-aos-duration="1200">
+                                    <label for="createuserName">First Name</label>
+                                    <div class="ic-group">
+                                        {{ form.first_name }}
+                                        {% if form.first_name.errors %}
+                                            <div class="error">
+                                                {{ form.first_name.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-single" data-aos="fade-up" data-aos-duration="1200">
+                                    <label for="createuserName">Last Name</label>
+                                    <div class="ic-group">
+                                        {{ form.last_name }}
+                                        {% if form.last_name.errors %}
+                                            <div class="error">
+                                                {{ form.last_name.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-single" data-aos="fade-up" data-aos-duration="1200">
+                                    <label for="createuserName">Email</label>
+                                    <div class="ic-group">
+                                        {{ form.email }}
+                                        {% if form.email.errors %}
+                                            <div class="error">
+                                                {{ form.email.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-single" data-aos="fade-up" data-aos-duration="1200">
+                                    <label for="createuserName">Phone Number</label>
+                                    <div class="ic-group">
+                                        {{ form.phone_number }}
+                                        {% if form.phone_number.errors %}
+                                            <div class="error">
+                                                {{ form.phone_number.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-single" data-aos="fade-up" data-aos-duration="1200">
+                                    <label for="createuserName">Password</label>
+                                    <div class="ic-group">
+                                        {{ form.password1 }}
+                                        {% if form.password1.errors %}
+                                            <div class="error">
+                                                {{ form.password1.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-single" data-aos="fade-up" data-aos-duration="1200">
+                                    <label for="createuserName">Confirm Password</label>
+                                    <div class="ic-group">
+                                        {{ form.password2 }}
+                                        {% if form.password2.errors %}
+                                            <div class="error">
+                                                {{ form.password2.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="section__content-cta" data-aos="fade-up" data-aos-duration="1200"
+                                     data-aos-delay="200">
+                                    <button type="submit" class="btn--primary">Create Account</button>
+                                </div>
+                                <div class="divider">
+                                    <span></span>
+                                    <p>Or continue with</p>
+                                    <span></span>
+                                </div>
+                            </form>
+                            <div class="auth-cta" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                                <button>
+                                    <img src="{% static 'images/google.png' %}" alt="Image">
+                                </button>
+                                <button>
+                                    <img src="{% static 'images/github-mark-white.png' %}" alt="Image">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="auth-footer">
+                            <p>
+                                Have an account?
+                                <a href="{% url 'sign-in' %}">Sign In!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

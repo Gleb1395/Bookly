@@ -1,0 +1,143 @@
+/* ==== 
+ --------- (5.12) error section styles start ---------
+ ==== */
+
+.error-section {
+  position: relative;
+  text-align: center;
+  padding: 150px 0px;
+  z-index: 1;
+}
+
+.error-section:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/background/pattern-one.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: "";
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.error-section .error-title {
+  position: relative;
+  color: var(--black);
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 1em;
+  text-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.error-section h4 {
+  color: var(--black);
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.error-section .text {
+  color: var(--quaternary-color);
+  font-size: 22px;
+  line-height: 1.4em;
+  margin-bottom: 30px;
+}
+
+.error-section .theme-btn {
+  border-radius: 5px;
+  font-weight: 500;
+  margin: 0 10px 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.thm-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none !important;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.64px;
+  padding: 44px 33px 44px;
+  text-transform: capitalize;
+  padding-right: 0;
+  transition: all 0.5s linear;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.thm-btn:hover {
+  color: var(--base-color);
+}
+
+.thm-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  z-index: -1;
+  width: 104px;
+  height: 104px;
+  background-color: var(--base-color);
+  border-radius: 50%;
+  transform: scaleY(1) rotateX(0deg) translateY(-50%);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+.thm-btn:hover::after {
+  transform: scaleY(0) rotateX(0deg) translateY(-50%);
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.thm-btn::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  z-index: -1;
+  width: 104px;
+  height: 104px;
+  background-color: #dbbbbb;
+  border-radius: 50%;
+  transform: scaleY(0) rotateX(0deg) translateY(-50%);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+.thm-btn:hover::before {
+  transform: scaleY(1) rotateX(0deg) translateY(-50%);
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+@media only screen and (max-width: 767px) {
+  .error-section .error-title {
+    font-size: 100px;
+  }
+
+  .error-section h4 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+/* ==== 
+ --------- (5.12) error section styles end ---------
+ ==== */
