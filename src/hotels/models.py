@@ -54,7 +54,7 @@ class Hotel(models.Model):
     def create_test_rooms(cls, count):
         fake = Faker()
         rooms = []
-        for _ in range(count):
+        for _ in range(count):  # NOQA F402
             room = Room.objects.create(
                 room_number=random.randint(1, 500),
                 room_type=random.choice(["SGL", "DBL", "TWN", "STU", "APT", "DEL", "FAM", "OFF"]),
@@ -122,8 +122,7 @@ class Room(models.Model):
         ],
     )
     room_type = models.CharField(_("room type"), choices=ROOM_TYPE_CHOICES, null=True, blank=True, max_length=120)
-    room_status = models.CharField(_("room status"), choices=ROOM_STATUS_CHOICES, null=True, blank=True,
-                                   max_length=120)
+    room_status = models.CharField(_("room status"), choices=ROOM_STATUS_CHOICES, null=True, blank=True, max_length=120)
     price_per_night = models.FloatField(
         _("price per night"),
         null=True,

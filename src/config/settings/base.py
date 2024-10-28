@@ -71,7 +71,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "social_django.context_processors.backends",
                 "social_django.context_processors.login_redirect",
-                "hotels.templatetags.context_processors.country_context"
+                "hotels.templatetags.context_processors.country_context",
             ],
         },
     },
