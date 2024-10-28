@@ -1,0 +1,483 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <section class="common-banner" data-background="{% static "images/background/breadcrumb-bg.png" %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="common-banner__inner">
+                        <h2 class="title-animation">Properties</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Properties List View
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / banner end ==== -->
+    <!-- ==== property section start ==== -->
+    <section class="property-list">
+
+        <div class="container">
+            <div class="row vertical-column-gap-lg">
+                <div class="col-12 col-xl-8">
+                    <div class="property-list__wrapper">
+                        <div class="property-list__single" data-aos="fade-up" data-aos-duration="1200">
+                            {% for hotel in hotels %}
+                            <div class="row align-items-center vertical-column-gap">
+                                <div class="col-12 col-md-6">
+                                    <div class="thumb-wrapper-two">
+                                        <div class="thumb">
+                                            <a href="property-details.html">
+                                                <img src="{% static 'images/thumb/properties/one.png' %}" alt="Image">
+                                            </a>
+                                        </div>
+
+                                        <div class="thumb-cta">
+                                            <a href="property-details.html">
+                                                <i class="flaticon-heart"></i>
+                                                <span class="tool">Wishlist</span>
+                                            </a>
+                                            <a href="property-details.html">
+                                                <i class="flaticon-shared-vision"></i>
+                                                <span class="tool">Quick View</span>
+                                            </a>
+                                            <a href="property-details.html">
+                                                <i class="flaticon-add"></i>
+                                                <span class="tool">Project Details</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="content">
+                                        <div class="specifications">
+                                            <p><i class="flaticon-double-bed"></i> {{ hotel.hotel_star_rating }}</p>
+                                            <p><i class="flaticon-bathroom"></i> {{ hotel.number_of_rooms }}</p>
+
+                                        </div>
+                                        <h4><a href="property-details.html">{{ hotel.hotel_name }}</a></h4>
+                                        <p class="location"><span class="icon-location"></span> {{ hotel.address}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+{#                        <div class="property-list__single" data-aos="fade-up" data-aos-duration="1200"#}
+{#                             data-aos-delay="400">#}
+{#                            <div class="row align-items-center vertical-column-gap">#}
+{#                                <div class="col-12 col-md-6">#}
+{#                                    <div class="thumb-wrapper-two">#}
+{#                                        <div class="thumb">#}
+{#                                            <a href="property-details.html">#}
+{#                                                <img src="{% static 'images/thumb/properties/two.png' %}" alt="Image">#}
+{#                                            </a>#}
+{#                                        </div>#}
+{#                                        <div class="thumb-cta">#}
+{#                                            <a href="property-details.html">#}
+{#                                                <i class="flaticon-heart"></i>#}
+{#                                                <span class="tool">Wishlist</span>#}
+{#                                            </a>#}
+{#                                            <a href="property-details.html">#}
+{#                                                <i class="flaticon-shared-vision"></i>#}
+{#                                                <span class="tool">Quick View</span>#}
+{#                                            </a>#}
+{#                                            <a href="property-details.html">#}
+{#                                                <i class="flaticon-add"></i>#}
+{#                                                <span class="tool">Project Details</span>#}
+{#                                            </a>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-12 col-md-6">#}
+{#                                    <div class="content">#}
+{#                                        <div class="specifications">#}
+{#                                            <p><i class="flaticon-double-bed"></i> 3 Bedroom</p>#}
+{#                                            <p><i class="flaticon-bathroom"></i> 3 Bathroom</p>#}
+{#                                            <p><i class="flaticon-house-design"></i> Sq Ft 750 </p>#}
+{#                                        </div>#}
+{#                                        <h4><a href="property-details.html">Luxury Home Appoint </a></h4>#}
+{#                                        <p class="location"><span class="icon-location"></span> 798 Talbot St.#}
+{#                                            Bridgewater,#}
+{#                                            NJ 08#}
+{#                                        </p>#}
+{#                                        <div class="price">#}
+{#                                            <h4><span class="price">$1,00,000</span> <span class="tim">/ mo</span>#}
+{#                                            </h4>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+                    </div>
+                {% if is_paginated%}
+                    {% include "includes/_pagination.html" %}
+                {% endif %}
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="property-details__sidebar">
+                        <div class="property-details__widget widget-alter" data-aos="fade-up"
+                             data-aos-duration="1200" data-aos-delay="400">
+                            <div class="thumb-wrapper">
+                                <span class="sub-title">36 Properties</span>
+                                <div class="thumb">
+                                    <a href="team-details.html">
+                                        <img src="{% static 'images/team/two.png' %}" alt="Image">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <span>Sweet Home</span>
+                                <h4><a href="team-details.html">Polly Matzinger
+                                </a>
+                                </h4>
+                                <p><a href="tel:256-255-6579"><i class="icon-mobile"></i> Call: +256 255 6579</a>
+                                </p>
+                                <p class="about-article">It's no secret that the digital industry is
+                                    booming. From exciting startups to need ghor
+                                    fore global and brands, companies are
+                                    reaching out.
+                                </p>
+                                <div class="cta text-center">
+                                    <a href="team-details.html" class="btn--primary">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-details__widget" data-aos="fade-up" data-aos-duration="1200"
+                             data-aos-delay="400">
+                            <div class="property-widget__header">
+                                <h5 class="title-animation">Property Search</h5>
+                            </div>
+                            <div class="content">
+                                <form action="#" method="post">
+                                    <div class="single-search-item">
+                                        <p>Suburb</p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="commercial">Commercial</option>
+                                            <option value="office">Office</option>
+                                            <option value="restaurant">Restaurant</option>
+                                            <option value="studio-home">Studio Home</option>
+                                            <option value="villa">villa</option>
+                                        </select>
+                                    </div>
+                                    <div class="single-search-item">
+                                        <p>House Category
+                                        </p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="commercial">Commercial</option>
+                                            <option value="office">Office</option>
+                                            <option value="restaurant">Restaurant</option>
+                                            <option value="studio-home">Studio Home</option>
+                                            <option value="villa">villa</option>
+                                        </select>
+                                    </div>
+                                    <div class="single-search-item">
+                                        <p>Price From
+                                        </p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="one-thousand">One Thousand</option>
+                                            <option value="two-thousands">Two Thousands</option>
+                                            <option value="three-thousands">Three Thousands</option>
+                                            <option value="four-thousands">Four Thousands</option>
+                                            <option value="ten-thousands">Ten Thousands</option>
+                                        </select>
+                                    </div>
+                                    <div class="single-search-item">
+                                        <p>Price To
+                                        </p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="one-thousand">One Thousand</option>
+                                            <option value="two-thousands">Two Thousands</option>
+                                            <option value="three-thousands">Three Thousands</option>
+                                            <option value="four-thousands">Four Thousands</option>
+                                            <option value="ten-thousands">Ten Thousands</option>
+                                        </select>
+                                    </div>
+                                    <div class="single-search-item">
+                                        <p>Bedrooms Min
+                                        </p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="one">One</option>
+                                            <option value="two">Two</option>
+                                            <option value="three">Three</option>
+                                            <option value="four">Four</option>
+                                            <option value="ten">Ten</option>
+                                        </select>
+                                    </div>
+                                    <div class="single-search-item">
+                                        <p>Bedrooms Max
+                                        </p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="one">One</option>
+                                            <option value="two">Two</option>
+                                            <option value="three">Three</option>
+                                            <option value="four">Four</option>
+                                            <option value="ten">Ten</option>
+                                        </select>
+                                    </div>
+                                    <div class="single-search-item">
+                                        <p>Bathrooms
+                                        </p>
+                                        <select>
+                                            <option data-display="Any" value="any">Any</option>
+                                            <option value="one">One</option>
+                                            <option value="two">Two</option>
+                                            <option value="three">Three</option>
+                                            <option value="four">Four</option>
+                                            <option value="ten">Ten</option>
+                                        </select>
+                                    </div>
+                                    <div class="search-cta">
+                                        <button type="submit" class="btn--primary">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="property-details__widget" data-aos="fade-up" data-aos-duration="1200"
+                             data-aos-delay="400">
+                            <div class="property-widget__header">
+                                <h5 class="title-animation">Popular Properties</h5>
+                            </div>
+                            <div class="content">
+                                <div class="single-item-two">
+                                    <div class="thumb">
+                                        <a href="blog-details.html">
+                                            <img src="{% static 'images/blog/property-one.png' %}" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <p><a href="blog-details.html">House on Calarita</a></p>
+                                        <p>Pawnee Street Butte
+                                        </p>
+                                        <div class="cta">
+                                            <p>$ 2500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-item-two">
+                                    <div class="thumb">
+                                        <a href="blog-details.html">
+                                            <img src="{% static 'images/blog/property-two.png' %}" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <p><a href="blog-details.html">Most Luxarious</a></p>
+                                        <p>Pawnee Street Butte
+                                        </p>
+                                        <div class="cta">
+                                            <p>$ 3000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-item-two">
+                                    <div class="thumb">
+                                        <a href="blog-details.html">
+                                            <img src="{% static 'images/blog/property-thre.png' %}" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <p><a href="blog-details.html">Sky Pol Villa</a></p>
+                                        <p>Pawnee Street Butte
+                                        </p>
+                                        <div class="cta">
+                                            <p>$ 4500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ==== / property section end ==== -->
+    <!-- ==== property type section start ==== -->
+    <section class="property-type" data-background="{% static 'images/property/slider-bg.png' %}">
+        <div class="container">
+            <div class="row align-items-center vertical-column-gap-lg">
+                <div class="col-12 col-xl-8">
+                    <div class="section__header">
+                        <span>Property Type</span>
+                        <h2 class="title-animation">Let's Explore by Property Type</h2>
+                        <div class="icon-thumb">
+                            <div class="icon-thumb-single">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="{% static 'images/sub-icon.png' %}" alt="Image" class="filter-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="slider-navigation-two justify-content-start justify-content-xl-end ">
+                        <button type="button" aria-label="prev slide" title="prev slide"
+                                class="prev-property prev-slide">
+                            <i class="fa-solid fa-angles-left"></i><span>Prev</span>
+                        </button>
+                        <button type="button" aria-label="next slide" title="next slide"
+                                class="next-property next-slide active">
+                            <span>Next</span><i class="fa-solid fa-angles-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="property-type-slider-wrapper">
+                        <div class="property-type-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-skyscrapers"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Commercial</a></h5>
+                                            <p>06 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-office"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Restaurant</a></h5>
+                                            <p>16 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}/" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Villas</a></h5>
+                                            <p>12 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-house-3"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Homes</a></h5>
+                                            <p>26 Listings</p>
+                                        </div>
+                                        <img src="{% static '/images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa-1"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Offices</a></h5>
+                                            <p>07 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-skyscrapers"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Commercial</a></h5>
+                                            <p>06 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-office"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Restaurant</a></h5>
+                                            <p>16 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Villas</a></h5>
+                                            <p>12 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-house-3"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Homes</a></h5>
+                                            <p>26 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="property-type-item">
+                                        <div class="thumb">
+                                            <i class="flaticon-villa-1"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="properties-grid-view.html">Offices</a></h5>
+                                            <p>07 Listings</p>
+                                        </div>
+                                        <img src="{% static 'images/property/item-bg.png' %}" alt="Image"
+                                             class="item-bg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

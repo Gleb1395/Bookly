@@ -1,0 +1,33 @@
+<div class="property-main-pagination" data-aos="fade-up" data-aos-duration="1200"
+     data-aos-delay="400">
+    <ul class="pagination blog-pagination">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}&sort={{ request.GET.sort }}">&laquo;</a>
+        {% endif %}
+        {% if page_obj.number > 4 %}
+            <a href="?page=1&sort={{ request.GET.sort }}">1</a>
+            {% if page_obj.number > 5 %}
+            {% endif %}
+        {% endif %}
+
+        <li>
+            <button>
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </li>
+        <li>
+            <a href="blog-list-view.html">1</a>
+        </li>
+        <li>
+            <a href="blog-list-view.html" class="active">2</a>
+        </li>
+        <li>
+            <a href="blog-list-view.html">3</a>
+        </li>
+        <li>
+            <button>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </li>
+    </ul>
+</div>

@@ -9,4 +9,5 @@ urlpatterns = [
     path("", include("main.urls")),
     path("user/", include("accounts.urls")),
     path("oauth/", include("social_django.urls", namespace="social")),
+    path("hotels/", include("hotels.urls")),
 ]
