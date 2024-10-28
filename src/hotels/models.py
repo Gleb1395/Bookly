@@ -1,6 +1,9 @@
+import random
+
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from faker import Faker
 from phonenumber_field.modelfields import PhoneNumberField
 
 
@@ -22,9 +25,9 @@ class Hotel(models.Model):
         (FOUR_STARS, _("Four stars")),
         (FIVE_STARS, _("Five stars")),
     ]
-    room = models.ForeignKey(
+    room = models.ManyToManyField(
         to="hotels.Room",
-        on_delete=models.CASCADE,
+        blank=True,
         null=True,
     )
     country = models.CharField(_("country"), max_length=150, blank=True, null=True)
@@ -46,6 +49,45 @@ class Hotel(models.Model):
 
     def __str__(self):
         return f"{self.hotel_name} by {self.city}"
+
+    @classmethod
+    def create_test_rooms(cls, count):
+        fake = Faker()
+        rooms = []
+        for _ in range(count):
+            room = Room.objects.create(
+                room_number=random.randint(1, 500),
+                room_type=random.choice(["SGL", "DBL", "TWN", "STU", "APT", "DEL", "FAM", "OFF"]),
+                room_status=random.choice(["AVAILABLE", "OCCUPIED", "RESERVED", "MAINTENANCE"]),
+                price_per_night=round(random.uniform(100, 2000), 2),
+                floor=random.randint(1, 10),
+                room_description=fake.paragraph(nb_sentences=2),
+            )
+            room.save()
+            rooms.append(room)
+        return rooms
+
+    @classmethod
+    def create_test_hotels(cls, count):
+        fake = Faker()
+        rooms = cls.create_test_rooms(count)
+        for i in range(count):
+            hotel = Hotel.objects.create(
+                country=fake.country(),
+                city=fake.city(),
+                hotel_name=fake.company(),
+                hotel_star_rating=random.choice([1, 2, 3, 4, 5]),
+                address=fake.address(),
+                hotel_photo=None,
+                number_of_rooms=random.randint(1, 500),
+                phone_number=fake.phone_number(),
+                email=fake.email(),
+                website=fake.url(),
+                description=fake.paragraph(nb_sentences=1),
+                client_reviews=fake.paragraph(nb_sentences=1),
+            )
+            hotel.room.set([rooms[i]])
+            hotel.save()
 
 
 class Room(models.Model):
@@ -75,13 +117,13 @@ class Room(models.Model):
         _("room number"),
         null=True,
         blank=True,
-        unique=True,
         validators=[
             MinValueValidator(1),
         ],
     )
     room_type = models.CharField(_("room type"), choices=ROOM_TYPE_CHOICES, null=True, blank=True, max_length=120)
-    room_status = models.CharField(_("room status"), choices=ROOM_STATUS_CHOICES, null=True, blank=True, max_length=120)
+    room_status = models.CharField(_("room status"), choices=ROOM_STATUS_CHOICES, null=True, blank=True,
+                                   max_length=120)
     price_per_night = models.FloatField(
         _("price per night"),
         null=True,
